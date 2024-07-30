@@ -18,6 +18,9 @@ stage('Deploy') {
   // Deploy the application (replace with your deployment commands)
    sh 'echo "Deploying the application"'
    }
+stage('Input'){
+steps {                              input message: 'Do you want to proceed?', ok: 'Proceed'             }
+}
   }
  }
 }
